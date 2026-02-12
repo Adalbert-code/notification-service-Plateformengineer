@@ -44,5 +44,5 @@ jobs:
 
       - name: Build and Publish to GHCR
         run: |
-          export KO_DOCKER_REPO=ghcr.io/${{ github.repository_owner }}/notifications-service
+          export KO_DOCKER_REPO=ghcr.io/adalbert-code/notifications-service
           ko build -t v1.0.1 --bare
