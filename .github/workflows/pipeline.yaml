@@ -39,10 +39,10 @@ jobs:
 
       - name: Build and Publish to Docker Hub
         run: |
-          export KO_DOCKER_REPO=docker.io/adal2022
+          export KO_DOCKER_REPO=docker.io/adal2022/notifications-service
           ko build -t v1.0.1 --bare
 
       - name: Build and Publish to GHCR
         run: |
-          export KO_DOCKER_REPO=ghcr.io/${{ github.repository_owner }}
+          export KO_DOCKER_REPO=ghcr.io/${{ github.repository_owner }}/notifications-service
           ko build -t v1.0.1 --bare
